@@ -8,5 +8,13 @@ module.exports = {
   siteName: 'Kusiaga',
   titleTemplate: '%s - Digital Experiement Lab',
   icon: './src/assets/icon.jpg',
-  plugins: []
+  plugins: [],
+  templates: {
+    Post: [
+      {
+        path: '/blog/:year/:month/:title',
+        component: './src/other/location/Post.vue'
+      }
+    ]
+  }
 }
