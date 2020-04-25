@@ -13,6 +13,7 @@
     "gridsome": "^0.7.0",
     "gridsome-plugin-netlify-cms": "^1.0.9",
     "moment": "^2.24.0",
-    "netlify-cms": "^2.10.47"
+    "netlify-cms": "^2.10.47",
+    "vue-disqus": "^3.0.5"
   }
 }

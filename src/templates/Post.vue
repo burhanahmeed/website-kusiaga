@@ -6,7 +6,8 @@
       <!-- <span>Date posted: {{ $page.post.date | date_format }}</span> -->
     </div>
     <div class="content">
-      <div class="markdown-body" v-html="$page.post.content"/>
+      <div class="markdown-body main-c" v-html="$page.post.content"/>
+      <vue-disqus shortname="Kusiaga" :identifier="$page.post.title"></vue-disqus>
     </div>
   </Layout>
 </template>
@@ -24,6 +25,7 @@ query ($id: ID!) {
 
 <script>
 import moment from 'moment';
+
 export default {
   metaInfo() {
     return {
@@ -40,6 +42,9 @@ export default {
       ],
     }
   },
+  components: {
+
+  },
   filters: {
     date_format (val) {
       return moment(val).format('LLLL')
@@ -50,6 +55,10 @@ export default {
 
 <style scoped>
 @import url('/css/style.css');
+.main-c {
+  margin: 20px 0;
+  margin-bottom: 30px;
+}
 .dark .markdown-body {
   color: wheat;
 }
