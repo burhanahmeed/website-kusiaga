@@ -18,7 +18,7 @@
 
 <page-query>
 query {
-  Post: allPost {
+  Post: allPost (sortBy: "date", order: DESC) {
     edges {
       node {
         id
