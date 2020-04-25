@@ -7,6 +7,7 @@
 module.exports = {
   siteName: 'Kusiaga',
   titleTemplate: '%s - Digital Experiement Lab',
+  siteDescription: "Learn and experiment about digital product!",
   icon: './src/assets/icon.jpg',
   transformers: {
     remark: {
@@ -37,11 +38,17 @@ module.exports = {
         publicPath: `/admin`
       }
     },
+    {
+      use: '@gridsome/plugin-google-analytics',
+      options: {
+        id: 'UA-112771033-3'
+      }
+    }
   ],
   templates: {
     Post: [
       {
-        path: '/blog/:year/:month/:title',
+        path: '/blog/:title',
         component: './src/other/location/Post.vue'
       }
     ]
