@@ -1,6 +1,9 @@
 ---
 title: "VueJS: Membuat Blog dengan VueJS dan NetlifyCMS."
-excerpt: a
+excerpt: Ada banyak pilihan teknologi yang dapat digunakan dalam membuat sebuah
+  Blog, bila tidak ingin repot bisa menggunakan Jekyll, Hugo, Gatsby, atau
+  VuePress. Namun kali ini saya akan menggunakan VueJS namun bukan VuePress
+  melainkan Gridsome.
 date: 2020-04-25T17:00:00.000Z
 thumbnail: /uploads/external-content.duckduckgo.com.jpeg
 ---
