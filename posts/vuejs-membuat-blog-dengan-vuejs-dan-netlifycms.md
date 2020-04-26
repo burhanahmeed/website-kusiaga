@@ -63,3 +63,11 @@ Sampai disini anda bisa melakukan modifikasi pada `Index.vue` dan `About.vue` la
 Setelah upload ke Giithub, sekarang saatnya deploy project ke [Netlify](https://www.netlify.com/). Gampang kok tinggal klik-klik aja jika udah anda akan mendapatkan alamat website anda dari Netlify.
 
 **Menghubungkan Dengan Netlify CMS**
+
+Dari dokumentasi dari Gridsome sudah sangat jelas untuk menghubungkan project Gridsome dengan Netlify CMS. Bacanya bisa mulai dari [sini](https://gridsome.org/docs/guide-netlify-cms/#install-the-required-dependencies).
+
+Udah? Sipp
+
+**Membuat List Blog Posts**
+
+**Membuat Single Page Blog Post**
