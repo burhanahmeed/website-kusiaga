@@ -72,6 +72,54 @@ Udah? Sipp
 
 Setelah semua diatas selesai, anda bisa login melalui `{alamat web anda}/admin` dan anda sudah bisa posting post blog pertama anda.
 
+![CMS Netlify](/uploads/screenshot-from-2020-04-26-13-33-09.png "Dashboard Netliy CMS")
 
+Setelah anda menambahkan NetlifyCMS maka struktur folder anda menjadi seperti berikut ini bukan?
+
+```
+.
+├── package.json
+├── gridsome.config.js
+├── gridsome.server.js
+├── static/
+|   └── uploads
+├── posts/
+└── src/
+    ├── main.js
+    ├── admin/
+    │   ├── config.yml
+    |   ├── index.js
+    │   └── index.html
+    ├── layouts/
+    │   └── Default.vue
+    ├── pages/
+    │   ├── Index.vue
+    │   ├── Blog.vue (Tambahkan file ini)
+    │   └── About.vue
+    └── templates/
+```
+
+Untuk membuat halaman list blog post, maka tambahkan file `Blog.vue` pada folder pages. Halaman ini sebagai halaman yang akan menampilkan list dari postingan blog yang telah kita buat.
+
+Isi dari `Blog.vue`. Untuk CSSnya anda bisa bikin sendiri ya.
+
+```javascript
+<template>
+    <Layout>
+        <h1>Blog</h1>
+        <div class="content-wrapper">
+          <template v-for="(p, idx) in $page.Post.edges">
+            <g-link :to="p.node.path" :key="idx">
+                <div class="item">
+                  <h4>{{ p.node.title }}</h4>
+                  <span><small>Posted from {{ p.node.date | date_format }}</small></span>
+                  <p>{{ p.node.excerpt }}</p>
+                </div>
+            </g-link>
+          </template>
+        </div>
+    </Layout>
+</template>
+```
 
 **Membuat Single Page Blog Post**
