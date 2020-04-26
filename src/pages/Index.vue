@@ -32,10 +32,10 @@ export default {
   metaInfo: {
     title: 'Kusiaga',
     meta: [
-      { name: "description", content: 'Kusiaga is a personal website owned by Burhanuddin Ahmad. Kusiaga provide a digital product, javascript framework/library and so on.' },
+      { name: "description", content: 'Kusiaga is a personal website owned by Burhanuddin Ahmad. Kusiaga make a digital product and write a blog about tech and product related but not limited to.' },
         // twitter-card: https://cards-dev.twitter.com/validator
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:description", content: 'Kusiaga is a personal website owned by Burhanuddin Ahmad. Kusiaga provide a digital product, javascript framework/library and so on.' },
+      { name: "twitter:description", content: 'Kusiaga is a personal website owned by Burhanuddin Ahmad. Kusiaga make a digital product and write a blog about tech and product related but not limited to.' },
       { name: "twitter:title", content: 'Kusiaga - Digital Experiment Lab' },
       { name: "twitter:site", content: "@burhannahm" },
       { name: "twitter:image", content: 'https://erticonetwork.com/wp-content/uploads/2016/06/smart-city-monitoring-horisontal-view.jpg' },

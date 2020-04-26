@@ -7,6 +7,13 @@
     </div>
     <div class="content">
       <div class="markdown-body main-c" v-html="$page.post.content"/>
+      <div class="author">
+        <img src="../assets/avatar.png" alt="avatar">
+        <div class="info">
+          <p class="name">Burhan A</p>
+          <p class="titled">A learner</p>
+        </div>
+      </div>
       <vue-disqus shortname="Kusiaga" :identifier="$page.post.title"></vue-disqus>
     </div>
   </Layout>
@@ -72,5 +79,29 @@ pre {
 }
 .content {
   padding: 15px;
+}
+.author {
+  display: block;
+}
+.author img {
+  height: 60px;
+  border-radius: 100%;
+  display: inline;
+  margin: 10px;
+  vertical-align: middle;
+}
+.author .info {
+  display: inline-block;
+  margin: 10px;
+  vertical-align: middle;
+}
+.titled {
+  font-size: 12px;
+  display: block;
+  margin: 0;
+}
+.name {
+  display: block;
+  margin: 0;
 }
 </style>

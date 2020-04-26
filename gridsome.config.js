@@ -7,7 +7,6 @@
 module.exports = {
   siteName: 'Kusiaga',
   titleTemplate: '%s - Digital Experiement Lab',
-  siteDescription: "Learn and experiment about digital product!",
   icon: './src/assets/icon.jpg',
   transformers: {
     remark: {
