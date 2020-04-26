@@ -112,7 +112,7 @@ Isi dari `Blog.vue`. Untuk CSSnya anda bisa bikin sendiri ya.
             <g-link :to="p.node.path" :key="idx">
                 <div class="item">
                   <h4>{{ p.node.title }}</h4>
-                  <span><small>Posted from {{ p.node.date | date_format }}</small></span>
+                  <span><small>Posted from {{ p.node.date }}</small></span>
                   <p>{{ p.node.excerpt }}</p>
                 </div>
             </g-link>
@@ -122,4 +122,107 @@ Isi dari `Blog.vue`. Untuk CSSnya anda bisa bikin sendiri ya.
 </template>
 ```
 
+Seletelah itu, masih berada di file yang sama `Blog.vue`, kita tambahkan script buat query graphQL untuk mendapatkan data dari folder `/posts`. Tambahkan dibawah `</template>`. 
+
+```plsql
+<page-query>
+query {
+  Post: allPost (sortBy: "date", order: DESC) {
+    edges {
+      node {
+        id
+        title
+        excerpt
+        date
+        path
+      }
+    }
+  }
+}
+</page-query>
+```
+
+Sampai disini seharusnya daftar postingan blog sudah muncul.
+
+
+
 **Membuat Single Page Blog Post**
+
+Jika diatas tadi halaman akan memunculkan list postingan blog, maka halaman ini akan memunculkan postingan blog yang diklik dari list diatas. 
+
+Pada langkah ini kita akan membutuhkan [template](https://gridsome.org/docs/templates/). 
+
+Mari menuju `gridsome.config.js`
+
+```javascript
+// gridsome.config.js
+
+module.exports = {
+  ....
+  
+  templates: {
+    Post: [
+      {
+        path: '/blog/:title',
+        component: './src/other/location/Post.vue'
+      }
+    ]
+  }
+}
+```
+
+Kemudian buat file `Post.vue` didalam folder `/src/templates/Post.vue `
+
+```javascript
+//Post.vue
+
+<template>
+  <Layout>
+    <div class="information">
+      <h2>{{ $page.post.title }}</h2>
+      <span>Date posted: {{ $page.post.date }}</span>
+      <!-- <span>Date posted: {{ $page.post.date | date_format }}</span> -->
+    </div>
+    <div class="content">
+      <div class="markdown-body main-c" v-html="$page.post.content"/>
+    </div>
+  </Layout>
+</template>
+
+<page-query>
+query ($id: ID!) {
+  post(id: $id) {
+    title
+    date
+    content
+    excerpt
+  }
+}
+</page-query>
+```
+
+Tambahan -> 
+
+Mari jangan kita abaikan faktor SEO, yaitu `title` dan `metatags` untuk single page ini. Masih pada halaman `Post.vue` kita tambahkan` metaInfo` dibawah `</page-query>`.
+
+```javascript
+//Post.vue
+
+<script>
+export default {
+  metaInfo() {
+    return {
+      title: this.$page.post.title,
+      meta: [
+        { name: "description", content: this.$page.post.excerpt },
+        { name: "twitter:card", content: "summary_large_image" },
+        { name: "twitter:description", content: this.$page.post.excerpt },
+        { name: "twitter:title", content: this.$page.post.title + ' - Gridsome' },
+      ],
+    }
+  }
+};
+</script>
+```
+
+Sampai langkah ini seharusnya halaman untuk per postingan sudah bisa diakses dan perjumpaan kita sampai disini. Semoga tidak ada yang terlewat, jika ada sesuatu bisa komentar dibawah ini.
