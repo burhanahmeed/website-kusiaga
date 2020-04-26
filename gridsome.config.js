@@ -15,6 +15,7 @@ module.exports = {
       anchorClassName: 'icon icon-link',
       plugins: [
         // ...global plugins
+        'gridsome-plugin-remark-prismjs-all',
       ]
     }
   },

@@ -26,6 +26,7 @@ query ($id: ID!) {
     date
     content
     excerpt
+    thumbnail
   }
 }
 </page-query>
@@ -44,7 +45,7 @@ export default {
         { name: "twitter:description", content: this.$page.post.excerpt },
         { name: "twitter:title", content: this.$page.post.title + ' - Digital Experiment Lab' },
         { name: "twitter:site", content: "@burhannahm" },
-        { name: "twitter:image", content: 'https://erticonetwork.com/wp-content/uploads/2016/06/smart-city-monitoring-horisontal-view.jpg' },
+        { name: "twitter:image", content: this.$page.post.thumbnail ? 'https://kusiaga.com'+this.$page.post.thumbnail : '' },
         { name: "twitter:creator", content: "@burhannahm" }
       ],
     }
