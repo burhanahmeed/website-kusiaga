@@ -34,7 +34,7 @@ Yarn
 
 Lalu tinggal install project Gridsomenya di directory yang anda mau. Ikuti command dibawah ini.
 
-1. `gridsome create my-gridsome-site `untuk membuat projek Gridsome baru.
+1. `gridsome create my-gridsome-site`untuk membuat projek Gridsome baru.
 2. Kemudian buka directory projek Gridsome anda dan buka terminal
 3. Lalu gunakan command `gridsome develop` untuk memulai server development project anda.
 
@@ -56,7 +56,7 @@ Lalu tinggal install project Gridsomenya di directory yang anda mau. Ikuti comma
     └── templates/
 ```
 
-Strultur folder yang berhasil dibuat adalah seperti ini. Cukup mirip dengan NuxtJS. File `Index.vue `pada `src/pages` digunakan sebagai entry file dimana ini akan menjadi root URL `localhost:8080/`. 
+Strultur folder yang berhasil dibuat adalah seperti ini. Cukup mirip dengan NuxtJS. File `Index.vue`pada `src/pages` digunakan sebagai entry file dimana ini akan menjadi root URL `localhost:8080/`. 
 
 Sampai disini anda bisa melakukan modifikasi pada `Index.vue` dan `About.vue` lalu setelah ini upload project anda ke Github. Ikuti langkahnya [disini](https://help.github.com/en/github/importing-your-projects-to-github/adding-an-existing-project-to-github-using-the-command-line) untuk upload ke repo. 
 
@@ -68,6 +68,10 @@ Dari dokumentasi dari Gridsome sudah sangat jelas untuk menghubungkan project Gr
 
 Udah? Sipp
 
-**Membuat List Blog Posts**
+**Membuat List Blog Post**
+
+Setelah semua diatas selesai, anda bisa login melalui `{alamat web anda}/admin` dan anda sudah bisa posting post blog pertama anda.
+
+
 
 **Membuat Single Page Blog Post**
