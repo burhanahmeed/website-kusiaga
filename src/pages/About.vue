@@ -6,8 +6,8 @@
     <h4>Now:</h4>
     <ul>
       <li>Reading a book about product management.</li>
-      <li>Built a product (confidential)</li>
-      <li>Volunteer at SBYJS</li>
+      <li>Building a product (confidential)</li>
+      <li>Volunteering at SBYJS</li>
     </ul>
     <h4>Contact:</h4>
     <ul>
