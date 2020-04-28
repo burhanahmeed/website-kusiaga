@@ -48,7 +48,7 @@ module.exports = {
   templates: {
     Post: [
       {
-        path: '/blog/:title',
+        path: '/blog/:uniqueid',
         component: './src/other/location/Post.vue'
       }
     ]

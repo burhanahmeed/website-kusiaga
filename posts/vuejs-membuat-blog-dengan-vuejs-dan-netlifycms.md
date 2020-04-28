@@ -1,5 +1,6 @@
 ---
-title: "VueJS: Membuat Blog dengan VueJS dan NetlifyCMS."
+title: "Belajar VueJS: Membuat Blog dengan VueJS dan NetlifyCMS."
+uniqueid: "VueJS: Membuat Blog dengan VueJS dan NetlifyCMS."
 excerpt: Ada banyak pilihan teknologi yang dapat digunakan dalam membuat sebuah
   Blog, bila tidak ingin repot bisa menggunakan Jekyll, Hugo, Gatsby, atau
   VuePress. Namun kali ini saya akan menggunakan VueJS namun bukan VuePress
