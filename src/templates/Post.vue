@@ -48,8 +48,8 @@ export default {
         { name: "twitter:image", content: this.$page.post.thumbnail ? 'https://kusiaga.com'+this.$page.post.thumbnail : '' },
         { name: "twitter:creator", content: "@burhannahm" },
 
-        { name: "og:description", content: this.$page.post.excerpt },
-        { name: "og:image", content: this.$page.post.thumbnail ? 'https://kusiaga.com'+this.$page.post.thumbnail : '' },
+        { property: "og:description", content: this.$page.post.excerpt },
+        { property: "og:image", content: this.$page.post.thumbnail ? 'https://kusiaga.com'+this.$page.post.thumbnail : '' },
       ],
     }
   },
