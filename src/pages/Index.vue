@@ -30,7 +30,41 @@
 <script>
 export default {
   metaInfo: {
-    title: 'Kusiaga'
+    title: 'Kusiaga',
+    meta: [
+      {
+        name: 'description',
+        content: `Kusiaga is a personal website owned by Burhanuddin Ahmad. Kusiaga make a digital product and write a blog about tech and product related but not limited to.`,
+      },
+      {
+        property: 'og:description',
+        content: `Kusiaga is a personal website owned by Burhanuddin Ahmad. Kusiaga make a digital product and write a blog about tech and product related but not limited to.`,
+      },
+      {
+        property: 'og:image',
+        content: `https://erticonetwork.com/wp-content/uploads/2016/06/smart-city-monitoring-horisontal-view.jpg`,
+      },
+      {
+        property: 'og:url',
+        content: `https://kusiaga.com`,
+      },
+      {
+        name: 'twitter:card',
+        content: `summary_large_image`,
+      },
+      {
+        name: 'twitter:description',
+        content: `Kusiaga is a personal website owned by Burhanuddin Ahmad. Kusiaga make a digital product and write a blog about tech and product related but not limited to.`,
+      },
+      {
+        name: 'twitter:image',
+        content: `https://erticonetwork.com/wp-content/uploads/2016/06/smart-city-monitoring-horisontal-view.jpg`,
+      },
+      {
+        name: 'twitter:site',
+        content: `@burhannahm`,
+      }
+    ]
   },
   data () {
     return {

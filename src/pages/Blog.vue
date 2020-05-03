@@ -36,7 +36,41 @@ query {
 import moment from 'moment'
 export default {
   metaInfo: {
-    title: 'Blog Posts'
+    title: 'Blog Posts',
+    meta: [
+      {
+        name: 'description',
+        content: `A blog that provide content, tutorials, information technology related. We are more to web development, javascript, and APIs related things.`,
+      },
+      {
+        property: 'og:description',
+        content: `A blog that provide content, tutorials, information technology related. We are more to web development, javascript, and APIs related things.`,
+      },
+      {
+        property: 'og:image',
+        content: `https://erticonetwork.com/wp-content/uploads/2016/06/smart-city-monitoring-horisontal-view.jpg`,
+      },
+      {
+        property: 'og:url',
+        content: `https://kusiaga.com/about`,
+      },
+      {
+        name: 'twitter:card',
+        content: `summary_large_image`,
+      },
+      {
+        name: 'twitter:description',
+        content: `A blog that provide content, tutorials, information technology related. We are more to web development, javascript, and APIs related things.`,
+      },
+      {
+        name: 'twitter:image',
+        content: `https://erticonetwork.com/wp-content/uploads/2016/06/smart-city-monitoring-horisontal-view.jpg`,
+      },
+      {
+        name: 'twitter:site',
+        content: `@burhannahm`,
+      }
+    ]
   },
   filters: {
     date_format (val) {
