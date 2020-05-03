@@ -46,7 +46,7 @@ export default {
         { name: "twitter:title", content: this.$page.post.title + ' - Digital Experiment Lab' },
         { name: "twitter:site", content: "@burhannahm" },
         { name: "twitter:image", content: this.$page.post.thumbnail ? 'https://kusiaga.com'+this.$page.post.thumbnail : '' },
-        { name: "twitter:creator", content: "@burhannahm" }
+        { name: "twitter:creator", content: "@burhannahm" },
 
         { name: "og:description", content: this.$page.post.excerpt },
         { name: "og:image", content: this.$page.post.thumbnail ? 'https://kusiaga.com'+this.$page.post.thumbnail : '' },

@@ -1,6 +1,6 @@
 <template>
     <Layout>
-        <h1>Blog</h1>
+        <h1>Blogs</h1>
         Also check my Medium account -><g-link class="nav__link" to="https://medium.com/@burhanahmeed">here</g-link>
         <div class="content-wrapper">
           <template v-for="(p, idx) in $page.Post.edges">
