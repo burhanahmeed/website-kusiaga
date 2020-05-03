@@ -35,10 +35,8 @@ query {
 <script>
 import moment from 'moment'
 export default {
-  metaInfo () {
-    return {
-      title: 'Blog Posts'
-    }
+  metaInfo: {
+    title: 'Blog Posts'
   },
   filters: {
     date_format (val) {

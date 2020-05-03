@@ -23,11 +23,13 @@ export default function (Vue, { router, head, isClient }) {
   head.meta.push({
     key: 'og:description',
     name: 'og:description',
+    property: 'og:description',
     content: `Kusiaga is a personal website owned by Burhanuddin Ahmad. Kusiaga make a digital product and write a blog about tech and product related but not limited to.`,
   })
   head.meta.push({
     key: 'og:image',
     name: 'og:image',
+    property: 'og:image',
     content: `https://erticonetwork.com/wp-content/uploads/2016/06/smart-city-monitoring-horisontal-view.jpg`,
   })
 
@@ -55,6 +57,7 @@ export default function (Vue, { router, head, isClient }) {
     head.meta.push({
       key: 'og:url',
       name: 'og:url',
+      property: 'og:url',
       content: 'https://kusiaga.com' + to.path,
     })
     next()
