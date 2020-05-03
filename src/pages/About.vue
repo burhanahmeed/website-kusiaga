@@ -40,7 +40,7 @@ export default {
         content: `About Kusiaga is a personal website owned by Burhanuddin Ahmad. Kusiaga make a digital product and write a blog about tech and product related but not limited to.`,
       },
       {
-        property: "og:image:secure_url",
+        property: "og:image:url",
         content: `https://erticonetwork.com/wp-content/uploads/2016/06/smart-city-monitoring-horisontal-view.jpg`,
       },
       {
