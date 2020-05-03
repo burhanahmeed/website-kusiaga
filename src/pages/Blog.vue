@@ -57,7 +57,7 @@ export default {
     return {
       meta: {
         description: 'We provide a content related to web technology, javascript, backends, and so on. We will give you an insight and tutorial about it.',
-        image: 'https://erticonetwork.com/wp-content/uploads/2016/06/smart-city-monitoring-horisontal-view.jpg',
+        image: 'https://kusiaga.com/metaimg.jpg',
         site: '@burhannahm'
       }
     }

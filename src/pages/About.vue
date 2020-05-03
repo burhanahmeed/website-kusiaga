@@ -50,7 +50,7 @@ export default {
     return {
       meta: {
         description: 'Kusiaga is a personal website owned by Burhanuddin Ahmad. Kusiaga make a digital product and write a blog about tech and product related but not limited to.',
-        image: 'https://erticonetwork.com/wp-content/uploads/2016/06/smart-city-monitoring-horisontal-view.jpg',
+        image: 'https://kusiaga.com/metaimg.jpg',
         site: '@burhannahm'
       }
     }
