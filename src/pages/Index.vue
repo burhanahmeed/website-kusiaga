@@ -29,44 +29,33 @@
 
 <script>
 export default {
-  metaInfo: {
-    title: 'Kusiaga',
-    meta: [
-      {
-        name: 'description',
-        content: `Kusiaga is a personal website owned by Burhanuddin Ahmad. Kusiaga make a digital product and write a blog about tech and product related but not limited to.`,
-      },
-      {
-        property: 'og:description',
-        content: `Kusiaga is a personal website owned by Burhanuddin Ahmad. Kusiaga make a digital product and write a blog about tech and product related but not limited to.`,
-      },
-      {
-        property: "og:image:url",
-        content: `https://erticonetwork.com/wp-content/uploads/2016/06/smart-city-monitoring-horisontal-view.jpg`,
-      },
-      {
-        name: 'twitter:card',
-        content: `summary_large_image`,
-      },
-      {
-        name: 'twitter:description',
-        content: `Kusiaga is a personal website owned by Burhanuddin Ahmad. Kusiaga make a digital product and write a blog about tech and product related but not limited to.`,
-      },
-      {
-        name: 'twitter:image',
-        content: `https://erticonetwork.com/wp-content/uploads/2016/06/smart-city-monitoring-horisontal-view.jpg`,
-      },
-      {
-        name: 'twitter:site',
-        content: `@burhannahm`,
-      }
-    ]
+  metaInfo (){
+    return {
+      title: 'Kusiaga',
+      meta: [
+        { name: "description", content: this.meta.description },
+            // twitter-card: https://cards-dev.twitter.com/validator
+        { name: "twitter:card", content: "summary_large_image" },
+        { name: "twitter:description", content: this.meta.description },
+        { name: "twitter:site", content: "@burhannahm" },
+        { name: "twitter:image", content: this.meta.image },
+        { name: "twitter:creator", content: "@burhannahm" },
+
+        { property: "og:description", content: this.meta.description },
+        { property: "og:image:url", content: this.meta.image },
+      ]
+    }
   },
   data () {
     return {
       isNightMode: false,
       isInit: true,
-      welcomeTxt: 'Please wait ...'
+      welcomeTxt: 'Please wait ...',
+      meta: {
+        description: 'Kusiaga is a personal website owned by Burhanuddin Ahmad. Kusiaga make a digital product and write a blog about tech and product related but not limited to.',
+        image: 'https://erticonetwork.com/wp-content/uploads/2016/06/smart-city-monitoring-horisontal-view.jpg',
+        site: '@burhannahm'
+      }
     }
   },
   mounted () {

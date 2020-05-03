@@ -35,42 +35,31 @@ query {
 <script>
 import moment from 'moment'
 export default {
-  metaInfo: {
-    title: 'Blog Posts',
-    meta: [
-      {
-        name: 'description',
-        content: `A blog that provide content, tutorials, information technology related. We are more to web development, javascript, and APIs related things.`,
-      },
-      {
-        property: 'og:description',
-        content: `A blog that provide content, tutorials, information technology related. We are more to web development, javascript, and APIs related things.`,
-      },
-      {
-        property: "og:image:url",
-        content: `https://erticonetwork.com/wp-content/uploads/2016/06/smart-city-monitoring-horisontal-view.jpg`,
-      },
-      {
-        property: 'og:url',
-        content: `https://kusiaga.com/about`,
-      },
-      {
-        name: 'twitter:card',
-        content: `summary_large_image`,
-      },
-      {
-        name: 'twitter:description',
-        content: `A blog that provide content, tutorials, information technology related. We are more to web development, javascript, and APIs related things.`,
-      },
-      {
-        name: 'twitter:image',
-        content: `https://erticonetwork.com/wp-content/uploads/2016/06/smart-city-monitoring-horisontal-view.jpg`,
-      },
-      {
-        name: 'twitter:site',
-        content: `@burhannahm`,
+  metaInfo (){
+    return {
+      title: 'Blog Posts',
+      meta: [
+        { name: "description", content: this.meta.description },
+            // twitter-card: https://cards-dev.twitter.com/validator
+        { name: "twitter:card", content: "summary_large_image" },
+        { name: "twitter:description", content: this.meta.description },
+        { name: "twitter:site", content: "@burhannahm" },
+        { name: "twitter:image", content: this.meta.image },
+        { name: "twitter:creator", content: "@burhannahm" },
+
+        { property: "og:description", content: this.meta.description },
+        { property: "og:image:url", content: this.meta.image },
+      ]
+    }
+  },
+  data () {
+    return {
+      meta: {
+        description: 'We provide a content related to web technology, javascript, backends, and so on. We will give you an insight and tutorial about it.',
+        image: 'https://erticonetwork.com/wp-content/uploads/2016/06/smart-city-monitoring-horisontal-view.jpg',
+        site: '@burhannahm'
       }
-    ]
+    }
   },
   filters: {
     date_format (val) {
