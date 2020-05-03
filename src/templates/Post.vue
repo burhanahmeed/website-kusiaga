@@ -49,7 +49,7 @@ export default {
         { name: "twitter:creator", content: "@burhannahm" },
 
         { property: "og:description", content: this.$page.post.excerpt },
-        { property: "og:image:url", content: this.$page.post.thumbnail ? 'https://kusiaga.com'+this.$page.post.thumbnail : '' },
+        { property: "og:image", content: this.$page.post.thumbnail ? 'https://kusiaga.com'+this.$page.post.thumbnail : '' },
       ],
     }
   },

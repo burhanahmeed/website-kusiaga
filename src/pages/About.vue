@@ -35,13 +35,14 @@ export default {
         { name: "description", content: this.meta.description },
             // twitter-card: https://cards-dev.twitter.com/validator
         { name: "twitter:card", content: "summary_large_image" },
+        { name: "twitter:title", content: 'About Me - Digital Experiment Lab' },
         { name: "twitter:description", content: this.meta.description },
         { name: "twitter:site", content: "@burhannahm" },
         { name: "twitter:image", content: this.meta.image },
         { name: "twitter:creator", content: "@burhannahm" },
 
         { property: "og:description", content: this.meta.description },
-        { property: "og:image:url", content: this.meta.image },
+        { property: "og:image", content: this.meta.image },
       ]
     }
   },
