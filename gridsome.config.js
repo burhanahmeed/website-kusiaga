@@ -5,6 +5,7 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 module.exports = {
+  siteUrl: 'https://kusiaga.com',
   siteName: 'Kusiaga',
   titleTemplate: '%s - Digital Experiement Lab',
   icon: './src/assets/icon.jpg',
@@ -42,6 +43,23 @@ module.exports = {
       use: '@gridsome/plugin-google-analytics',
       options: {
         id: 'UA-112771033-3'
+      }
+    },
+    {
+      use: '@gridsome/plugin-sitemap',
+      options: {
+        cacheTime: 600000, // default
+        exclude: [],
+        config: {
+          '/blog/*': {
+            changefreq: 'weekly',
+            priority: 0.5
+          },
+          '/about': {
+            changefreq: 'monthly',
+            priority: 0.7
+          }
+        }
       }
     }
   ],
