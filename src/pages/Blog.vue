@@ -47,7 +47,7 @@ export default {
         content: `A blog that provide content, tutorials, information technology related. We are more to web development, javascript, and APIs related things.`,
       },
       {
-        property: 'og:image',
+        property: "og:image:secure_url",
         content: `https://erticonetwork.com/wp-content/uploads/2016/06/smart-city-monitoring-horisontal-view.jpg`,
       },
       {
