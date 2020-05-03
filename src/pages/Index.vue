@@ -45,10 +45,6 @@ export default {
         content: `https://erticonetwork.com/wp-content/uploads/2016/06/smart-city-monitoring-horisontal-view.jpg`,
       },
       {
-        property: 'og:url',
-        content: `https://kusiaga.com`,
-      },
-      {
         name: 'twitter:card',
         content: `summary_large_image`,
       },
