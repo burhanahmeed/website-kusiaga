@@ -35,11 +35,16 @@ query {
 <script>
 import moment from 'moment'
 export default {
-    filters: {
-      date_format (val) {
-        return moment(val).fromNow()
-      }
+  metaInfo () {
+    return {
+      title: 'Blog Posts'
     }
+  },
+  filters: {
+    date_format (val) {
+      return moment(val).fromNow()
+    }
+  }
 }
 </script>
 

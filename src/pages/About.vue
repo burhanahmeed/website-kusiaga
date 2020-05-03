@@ -29,17 +29,7 @@
 <script>
 export default {
   metaInfo: {
-    title: 'About us',
-    meta: [
-      { name: "description", content: 'Kusiaga is a personal website owned by Burhanuddin Ahmad. Kusiaga provide a digital product, javascript framework/library and so on.' },
-        // twitter-card: https://cards-dev.twitter.com/validator
-      { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:description", content: 'Kusiaga is a personal website owned by Burhanuddin Ahmad. Kusiaga provide a digital product, javascript framework/library and so on.' },
-      { name: "twitter:title", content: 'Kusiaga - Digital Experiment Lab' },
-      { name: "twitter:site", content: "@burhannahm" },
-      { name: "twitter:image", content: 'https://erticonetwork.com/wp-content/uploads/2016/06/smart-city-monitoring-horisontal-view.jpg' },
-      { name: "twitter:creator", content: "@burhannahm" }
-    ],
+    title: 'About us'
   }
 }
 </script>
