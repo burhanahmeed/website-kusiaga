@@ -11,7 +11,7 @@
     </ul>
     <h4>Contact:</h4>
     <ul>
-      <li>Email <a href="mailto:halo@kusiaga.com">halo@kusiaga.com</a></li>
+      <li>Email <a href="mailto:brhn@kusiaga.com">brhn@kusiaga.com</a></li>
       <li>IG <a target="_blank" href="https://www.instagram.com/burhannahm/">burhannahm</a></li>
       <li>Linkedin <a target="_blank" href="https://www.linkedin.com/in/burhanahmeed/">burhannahm</a></li>
       <li>Telegram <a target="_blank" href="https://t.me/burhannahm">burhannahm</a></li>
