@@ -51,3 +51,7 @@ Dari namanya saja adalah dynamic atau dinamis, oh ya jangan lupa dengan mengguna
 ![Dynamic rendering google](/uploads/how-dynamic-rendering-works.png "Sumber dari website milik Google")
 
 **Bagaimana kita bisa mengimplementasikannya?**
+
+Pertama anda membutuhkan sebuah server yang bisa mendukung NodeJS, jika tidak punya maka bisa anda gunakan Heroku.
+
+Cara mudahnya ada dapat membuat folder project anda kemudian lakukan \`npm init\`
