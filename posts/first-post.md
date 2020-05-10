@@ -1,8 +1,8 @@
 ---
 title: Dynamic Rendering, Solusi Sederhana untuk SPA Ketika Dibagikan ke Sosial Media
 uniqueid: Dynamic Rendering, Solusi Sederhana untuk SPA Ketika Dibagikan ke Sosial Media
-excerpt: Ketika website anda merupakan sebuah website berbasis *single page
-  application* maka siap-siap saja bot Facebook maupun Twitter tidak dapat
+excerpt: Ketika website anda merupakan sebuah website berbasis single page
+  application maka siap-siap saja bot Facebook maupun Twitter tidak dapat
   membaca meta tag atau content yang ada pada website anda. Berdasarkan
   eksperimen yang saya lakukan ketika artikel ini ditulis bulan Mei 2020,
   Facebook bot tidak dalam membaca website yang berbasis SPA
