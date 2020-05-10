@@ -79,7 +79,7 @@ const app = express();
 var path = require("path");
 
 const directory = 'dist';
-const dist = path.join(dist, directory)
+const dist = path.join(__dirname, directory)
 
 const port = process.env.PORT || 3000;
 
@@ -142,6 +142,8 @@ app.use(uAgentMiddleware)
 Setelah menambahkan kode diatas, maka selanjutnya pastikan anda telah mengcopy folder *dist* anda atau folder hasil build applikasi Vue (dalam hal ini saya menggunakan VueJS) ke folder yang sama dengan `index.js`.
 
 Terakhir pada `package.json` tambahkan sebuah script seperti berikut ini untuk menjalankan `index.js`.
+
+Selanjutnya tinggal run saja dengan `npm run start` untuk menyalakan server.
 
 ```json
 //package.json
