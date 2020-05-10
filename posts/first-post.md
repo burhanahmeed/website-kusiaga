@@ -54,4 +54,4 @@ Dari namanya saja adalah dynamic atau dinamis, oh ya jangan lupa dengan mengguna
 
 Pertama anda membutuhkan sebuah server yang bisa mendukung NodeJS, jika tidak punya maka bisa anda gunakan Heroku.
 
-Cara mudahnya ada dapat membuat folder project anda kemudian lakukan \`npm init\`
+Cara mudahnya ada dapat membuat folder project anda kemudian lakukan `npm init` dan install Expressjs dan Puppeteer didalamnya dengan command `npm install express`, `npm install puppeteer`.
