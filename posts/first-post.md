@@ -54,4 +54,98 @@ Dari namanya saja adalah dynamic atau dinamis, oh ya jangan lupa dengan mengguna
 
 Pertama anda membutuhkan sebuah server yang bisa mendukung NodeJS, jika tidak punya maka bisa anda gunakan Heroku.
 
-Cara mudahnya ada dapat membuat folder project anda kemudian lakukan `npm init` dan install Expressjs dan Puppeteer didalamnya dengan command `npm install express`, `npm install puppeteer`.
+Cara mudahnya ada dapat membuat folder project anda kemudian lakukan `npm init`.
+
+Kemudian install beberapa package seperti dibawah ini:
+
+ExpressJS: `npm install express`
+
+Puppeteer: `npm install puppeteer`
+
+Useragent: `npm install useragent`
+
+Setelah ketiga package terinstall, maka anda perlu membuat file `index.js` sebagai entry point di server side anda.
+
+```javascript
+//index.js
+
+const express = require('express');
+const puppeteer = require('puppeteer');
+const ua = require('useragent');
+const app = express();
+var path = require("path");
+
+const directory = 'dist';
+const dist = path.join(dist, directory)
+
+const port = process.env.PORT || 3000;
+
+//you can put your puppeteer middleware here later
+
+
+app.use('*', (req, res) => {
+	res.sendFile(path.join(dist, 'index.html'));
+})
+
+app.listen(port, () => {
+    console.log(`Web server is running at port ${port}`);
+});
+```
+
+Tambahkan kode untuk middleware untuk mendeteksi useragent.
+
+```javascript
+function isBot (useragent) {
+	const agent = ua.is(useragent);
+	return !agent.webkit && !agent.opera && !agent.ie &&
+        !agent.chrome && !agent.safari && !agent.mobile_safari &&
+        !agent.firefox && !agent.mozilla && !agent.android;
+}
+
+const uAgentMiddleware = async (req, res, next) => {
+	const local_url = 'YOUR_BASE_URL'
+
+	if (!isBot(req.headers['user-agent'])) {
+		next ()
+	} else {
+
+		try {
+			const browser = await puppeteer.launch({
+			  'args' : [
+			    '--no-sandbox',
+			    '--disable-setuid-sandbox'
+			  ]
+			})
+			const page = await browser.newPage();
+			await page.setUserAgent('Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36');
+		 	await page.goto(local_url, {
+	            waitUntil: "networkidle0",
+	        });
+	        const html = await page.evaluate(() => {
+	            return document.documentElement.innerHTML;
+	        });
+	        await browser.close();
+
+	        res.send(html);
+		} catch (err) {
+			res.send(err)
+		}
+	}
+}
+
+app.use(uAgentMiddleware)
+```
+
+Setelah menambahkan kode diatas, maka selanjutnya pastikan anda telah mengcopy folder *dist* anda atau folder hasil build applikasi Vue (dalam hal ini saya menggunakan VueJS) ke folder yang sama dengan `index.js`.
+
+Terakhir pada `package.json` tambahkan sebuah script seperti berikut ini untuk menjalankan `index.js`.
+
+```json
+//package.json
+
+//....  
+"scripts": {
+  "start": "node index.js"
+},
+//...
+```
