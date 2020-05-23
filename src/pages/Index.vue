@@ -117,7 +117,7 @@ h4 {
 }
 .creation li {
   list-style: none;
-  display: inline;
+  display: inline-block;
   margin: 5px;
   font-size: 12px;
 }

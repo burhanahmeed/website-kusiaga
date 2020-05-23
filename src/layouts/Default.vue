@@ -10,7 +10,7 @@
           <img @click="toggle" v-if="isNightMode" class="iconsvg" src="../assets/sun.svg" alt="sun">
         </div>
         <div class="menu">
-          <span @click="toggleMenu">&#9776;</span>
+          <span class="hamburger" @click="toggleMenu">&#9776;</span>
           <nav class="nav" :class="{ 'nav-on': isMenuShowed }">
             <g-link class="nav__link" to="/">Home</g-link>
             <g-link class="nav__link" to="/talks">Talks</g-link>
@@ -119,7 +119,13 @@ body {
 </style>
 
 <style scoped>
+.hamburger {
+  display: none;
+}
 @media screen and (max-width: 450px) {
+  .hamburger {
+  display: block;
+}
   .nav {
     padding: 15px;
     position: absolute;
