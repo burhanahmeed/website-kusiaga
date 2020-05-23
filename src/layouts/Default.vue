@@ -9,11 +9,15 @@
           <img @click="toggle" v-if="!isNightMode" class="iconsvg" src="../assets/half-moon.svg" alt="moon">
           <img @click="toggle" v-if="isNightMode" class="iconsvg" src="../assets/sun.svg" alt="sun">
         </div>
-        <nav class="nav">
-          <g-link class="nav__link" to="/">Home</g-link>
-          <g-link class="nav__link" to="/blog/">Blog</g-link>
-          <g-link class="nav__link" to="/about/">About</g-link>
-        </nav>
+        <div class="menu">
+          <span @click="toggleMenu">&#9776;</span>
+          <nav class="nav" :class="{ 'nav-on': isMenuShowed }">
+            <g-link class="nav__link" to="/">Home</g-link>
+            <g-link class="nav__link" to="/talks">Talks</g-link>
+            <g-link class="nav__link" to="/blog/">Blog</g-link>
+            <g-link class="nav__link" to="/about/">About</g-link>
+          </nav>
+        </div>
       </header>
       <slot/>
     </div>
@@ -35,7 +39,8 @@ query {
 export default {
   data () {
     return {
-      isNightMode: false
+      isNightMode: false,
+      isMenuShowed: false
     }
   },
   mounted () {
@@ -58,6 +63,9 @@ export default {
       } else {
         el.classList.remove('dark')
       }
+    },
+    toggleMenu () {
+      this.isMenuShowed = !this.isMenuShowed;
     }
   }
 }
@@ -107,5 +115,33 @@ body {
 }
 .head-title {
   padding: 10px;
+}
+</style>
+
+<style scoped>
+@media screen and (max-width: 450px) {
+  .nav {
+    padding: 15px;
+    position: absolute;
+    top: 25px;
+    /* right: -500px; */
+    width: 0;
+    border: #171717 1px solid;
+    display: none;
+    transition: 1s ease-in display;
+    background-color: white;
+  }
+  .nav-on {
+    right: -10px;
+    display: block;
+    width: 150px;
+  }
+  .nav a{
+    display: block;
+    color: black;
+  }
+  .menu {
+    position: relative;
+  }
 }
 </style>

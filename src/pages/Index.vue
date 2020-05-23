@@ -7,6 +7,15 @@
 
     <h1>Hello, world!</h1>
 
+    <div class="my-creation">
+      <h4>My creations:</h4>
+      <ul class="creation">
+        <li v-for="i in creation">
+          <a class="wrapper-bg" target="_blank" :href="i.url">{{ i.nama }}</a>
+        </li>
+      </ul>
+    </div>
+
     <p class="editor">
       <span style="color: rgb(190, 173, 236)">console.</span><span style="color: #0b6a35">log<span style="color: white">(</span></span><span style="color: rgb(179, 86, 18)">'Welcome to Kusiaga Digital Lab'</span><span style="color: white">)</span>
       <span v-if="!isInit" style="display: flex; justify-content: space-between;">
@@ -28,6 +37,7 @@
 </template>
 
 <script>
+import Creation from '../staticApi/creation';
 export default {
   metaInfo (){
     return {
@@ -49,6 +59,7 @@ export default {
   },
   data () {
     return {
+      creation: Creation,
       isNightMode: false,
       isInit: true,
       welcomeTxt: 'Please wait ...',
@@ -93,5 +104,32 @@ export default {
 }
 .dark .editor {
   background-color: transparent;
+}
+</style>
+
+<style scoped>
+h4 {
+  margin-bottom: 5px;
+}
+.creation {
+  margin-top: 5px;
+  padding-left: 0;
+}
+.creation li {
+  list-style: none;
+  display: inline;
+  margin: 5px;
+  font-size: 12px;
+}
+.wrapper-bg {
+  background: olive;
+  padding: 5px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: wheat;
+}
+.my-creation {
+  min-height: 100px;
+  margin-bottom: 20px;
 }
 </style>

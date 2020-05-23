@@ -7,6 +7,7 @@
     <ul>
       <li>Reading a book about product management.</li>
       <li>Building a product (confidential)</li>
+      <li>Learning OOP and TypeScript</li>
       <li>Volunteering at SBYJS</li>
     </ul>
     <h4>Contact:</h4>
@@ -15,10 +16,11 @@
       <li>IG <a target="_blank" href="https://www.instagram.com/burhannahm/">burhannahm</a></li>
       <li>Linkedin <a target="_blank" href="https://www.linkedin.com/in/burhanahmeed/">burhannahm</a></li>
       <li>Telegram <a target="_blank" href="https://t.me/burhannahm">burhannahm</a></li>
+      <li>Devto <a target="_blank" href="https://dev.to/burhanahmeed">burhanahmeed</a></li>
     </ul>
     <h4>Technology stacks:</h4>
     <ul>
-      <li>VueJS, NuxtJS, Javascript</li>
+      <li>VueJS, NuxtJS, Javascript, NodeJS, Deno</li>
       <li>ExpressJS, Laravel</li>
       <li>MySQL, MongoDB</li>
       <li>Node-cache, Redis</li>
