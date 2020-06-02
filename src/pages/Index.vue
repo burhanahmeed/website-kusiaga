@@ -8,7 +8,7 @@
     <h1>Hello, world!</h1>
 
     <div class="my-creation">
-      <h4>My creations:</h4>
+      <h4>Side-projects / Fun projects:</h4>
       <ul class="creation">
         <li v-for="i in creation">
           <a class="wrapper-bg" target="_blank" :href="i.url">{{ i.nama }}</a>
