@@ -58,3 +58,43 @@ let UTCTime = new Date().getTime();
 
 let SGTime = new Date(UTCTime + SGOverlap).toISOString();
 ```
+
+## Time.TS
+
+Untuk menggunakan Time.ts mudah saja tinggal *import* project time.ts.
+
+```javascript
+import { Time, timezone } from "https://denopkg.com/burhanahmeed/time.ts/mod.ts";
+//or
+import { Time, timezone } from "https://deno.land/x/time.ts/mod.ts";
+//or
+import { Time, timezone } from "https://denoland.id/x/time.ts/mod.ts";
+```
+
+Lalu untuk contoh codenya adalah seperti berikut ini.
+
+```javascript
+import { Time } from "https://denopkg.com/burhanahmeed/time.ts/mod.ts";
+
+console.log('Jakarta Timezone: ', new Time().timezone('Asia/Jakarta'))
+//Jakarta Timezone:  2020-06-06T20:21:14.765Z
+
+console.log('Singapore Timezone: ', new Time().timezone('Asia/Singapore'))
+//Singapore Timezone:  2020-06-06T21:21:14.766Z
+
+console.log('Jakarta Timezone: ', new Time('2020-06-06 14:33:12').timezone('Asia/Jakarta'))
+//Jakarta Timezone:  2020-06-06T14:33:12.000Z
+
+console.log('Singapore Timezone: ', new Time('2020-06-06 14:33:12').timezone('Asia/Singapore'))
+//Singapore Timezone:  2020-06-06T15:33:12.000Z
+
+console.log('UTC timezone: ', new Time().utc)
+//UTC timezone:  2020-06-06T13:21:14.766Z
+
+console.log('Now timezone: ', new Time().now)
+//Now timezone:  2020-06-06T20:21:14.766Z
+```
+
+Kedepannya semoga saya ada waktu untuk mengembangakan module ini lebih jauh lagi. Bila menemukan suatu masalah bisa submit issue di [github Time.ts](https://github.com/burhanahmeed/time.ts).
+
+Jangan lupa juga coba boilerplate [Denamo](https://github.com/burhanahmeed/Denamo) saya.
