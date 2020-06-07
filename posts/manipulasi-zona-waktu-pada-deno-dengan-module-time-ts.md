@@ -1,6 +1,6 @@
 ---
-title: Bagaimana Saya Membuat Manipulasi Zona Waktu pada Deno dengan Module Time.ts
-uniqueid: Bagaimana Saya Membuat Manipulasi Zona Waktu pada Deno dengan Module Time.ts
+title: Bagaimana Saya Membuat Manipulasi Zona Waktu Time.ts pada Deno
+uniqueid: Bagaimana Saya Membuat Manipulasi Zona Waktu Time.ts pada Deno
 excerpt: Deno baru saja meluncur pada bulan May 2020 lalu, namun hypenya sudah
   begitu terasa dikalangan JS/TS developer. Ratusan library / module sudah
   langsung muncul sejak hari pertama Deno dirilis.  Namun sepertinya untuk
