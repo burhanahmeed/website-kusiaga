@@ -2,21 +2,45 @@
   <Layout @mode="nightMode">
 
     <!-- Learn how to use images here: https://gridsome.org/docs/images -->
-    <g-image v-if="!isNightMode" alt="Example image" src="~/assets/logo.png" width="135" />
-    <g-image v-if="isNightMode" alt="Example image" src="~/assets/logo-w.png" width="135" />
-
-    <h1>Hello, world!</h1>
-
-    <div class="my-creation">
-      <h4>My creations:</h4>
-      <ul class="creation">
-        <li v-for="i in creation">
-          <a class="wrapper-bg" target="_blank" :href="i.url">{{ i.nama }}</a>
-        </li>
-      </ul>
+    <!-- <g-image v-if="!isNightMode" alt="Example image" src="~/assets/logo.png" width="135" />
+    <g-image v-if="isNightMode" alt="Example image" src="~/assets/logo-w.png" width="135" /> -->
+    <div class="group-person">
+      <g-image 
+        style="border-radius: 100%" 
+        alt="Example image" 
+        src="~/assets/avatar.png" width="100" 
+      />
+      <div class="person-desc">
+        <c-text 
+          fontSize="lg" 
+          style="font-weight: 700;"
+        >
+          Burhanuddin Ahmad
+        </c-text>
+        <c-text 
+          fontSize="sm"
+        >
+          a software engineer, startup enthusiast, entrepreneur
+        </c-text>
+      </div>
     </div>
 
-    <p class="editor">
+    <div style="margin: 20px 0">
+      <c-text fontSize="xl" style="font-weight: 700">Howdy!</c-text>
+      <c-text fontSize="md">I am mainly work with JavaScript and all the thing related to web technology, but sometimes I also work with mobile development if needed.</c-text>
+    </div>
+
+    <div style="margin: 20px 0">
+      <c-text fontSize="xl" style="font-weight: 700">My public works</c-text>
+      <github-wrapper :nightMode="isNightMode" />
+      <c-box align-items="center" width="100%" style="padding: 15px; text-align: center">
+        <c-link as="router-link" href="https://github.com/burhanahmeed" is-external>
+          <c-button variant-color="green">View on Github</c-button>
+        </c-link>
+      </c-box>
+    </div>
+
+    <!-- <p class="editor">
       <span style="color: rgb(190, 173, 236)">console.</span><span style="color: #0b6a35">log<span style="color: white">(</span></span><span style="color: rgb(179, 86, 18)">'Welcome to Kusiaga Digital Lab'</span><span style="color: white">)</span>
       <span v-if="!isInit" style="display: flex; justify-content: space-between;">
         <span style="color: rgb(179, 86, 18)">'Welcome to Kusiaga Digital Lab'</span>
@@ -26,7 +50,7 @@
         <span>{{ welcomeTxt }}</span>
         <span style="color: rgb(190, 173, 236); font-size: 13px">../App.js</span>
       </span>
-    </p>
+    </p> -->
 
     <!-- <p class="home-links">
       <a href="https://gridsome.org/docs/" target="_blank" rel="noopener">Medium</a>
@@ -37,8 +61,21 @@
 </template>
 
 <script>
-import Creation from '../staticApi/creation';
+import GithubWrapper from '../components/github/wrapper';
+import { 
+  CText, 
+  CButton,
+  CBox,
+  CLink
+} from '@chakra-ui/vue';
 export default {
+  components: {
+    GithubWrapper,
+    CText,
+    CButton,
+    CBox,
+    CLink
+  },
   metaInfo (){
     return {
       title: 'Kusiaga',
@@ -59,7 +96,6 @@ export default {
   },
   data () {
     return {
-      creation: Creation,
       isNightMode: false,
       isInit: true,
       welcomeTxt: 'Please wait ...',
@@ -131,5 +167,22 @@ h4 {
 .my-creation {
   min-height: 100px;
   margin-bottom: 20px;
+}
+
+.group-person {
+  display: block ruby;
+}
+.person-desc {
+  padding: 15px;
+  vertical-align: middle;
+}
+
+@media screen and (max-width: 400px) {
+  .person-desc {
+    padding: 15px 0;
+  }
+  .group-person {
+    display: block;
+  }
 }
 </style>

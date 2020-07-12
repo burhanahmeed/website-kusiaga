@@ -4,6 +4,7 @@
 
 // Changes here require a server restart.
 // To restart press CTRL + C in terminal and run `gridsome develop`
+const axios = require('axios')
 
 module.exports = function (api) {
   api.loadSource(({ addCollection }) => {
@@ -12,5 +13,19 @@ module.exports = function (api) {
 
   api.createPages(({ createPage }) => {
     // Use the Pages API here: https://gridsome.org/docs/pages-api/
+  })
+
+  api.configureServer(app => {
+    app.get('/api/github/:name', (req, res) => {
+      axios.get('https://api.github.com/repos/burhanahmeed/'+req.params.name, {
+        headers: {
+          'Authorization': `token ${process.env.GITHUB_TOKEN}`
+        }
+      }).then(data => {
+        res.json({
+          data: data.data
+        })
+      })
+    })
   })
 }

@@ -115,6 +115,7 @@ body {
 }
 .head-title {
   padding: 10px;
+  display: block ruby;
 }
 </style>
 
