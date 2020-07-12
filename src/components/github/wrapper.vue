@@ -24,7 +24,11 @@ export default {
     methods: {
         setup () {
             for (let index = this.creation.length -1 ; index >= 0; index--) {
-                axios.get('/api/github/'+this.creation[index].unique_name).then(res => {
+                axios.get('/.netlify/functions/repository', {
+                    params: {
+                        name: this.creation[index].unique_name
+                    }
+                }).then(res => {
                     this.github_data.push(res.data.data)
                 })
             }

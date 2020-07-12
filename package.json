@@ -2,11 +2,9 @@
   "name": "website-kusiaga",
   "private": true,
   "scripts": {
-    "lambda-install": "netlify-lambda install lambda/github",
-    "lambda-server": "netlify-lambda serve lambda/github",
-    "lambda-build": "netlify-lambda build lambda/github",
-    "build": "NODE_ENV=production gridsome build && npm run lambda-build",
-    "dev": "gridsome develop",
+    "build": "gridsome build && netlify-lambda build lambda/github",
+    "dev": "gridsome develop && netlify-lambda serve lambda/github",
+    "lambda": "netlify-lambda build lambda/github && netlify-lambda serve lambda/github",
     "explore": "gridsome explore"
   },
   "dependencies": {
