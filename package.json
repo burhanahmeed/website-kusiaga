@@ -2,7 +2,10 @@
   "name": "website-kusiaga",
   "private": true,
   "scripts": {
-    "build": "gridsome build",
+    "lambda-install": "netlify-lambda install lambda/github",
+    "lambda-server": "netlify-lambda serve lambda/github",
+    "lambda-build": "netlify-lambda build lambda/github",
+    "build": "NODE_ENV=production gridsome build && npm run lambda-build",
     "dev": "gridsome develop",
     "explore": "gridsome explore"
   },
@@ -13,12 +16,17 @@
     "@gridsome/source-filesystem": "^0.6.2",
     "@gridsome/transformer-remark": "^0.5.0",
     "axios": "^0.19.2",
+    "dotenv": "^8.2.0",
     "emotion": "^10.0.27",
     "gridsome": "^0.7.0",
     "gridsome-plugin-netlify-cms": "^1.0.9",
     "gridsome-plugin-remark-prismjs-all": "^0.3.5",
     "moment": "^2.24.0",
     "netlify-cms": "^2.10.47",
+    "querystring": "^0.2.0",
     "vue-disqus": "^3.0.5"
+  },
+  "devDependencies": {
+    "netlify-lambda": "^1.6.3"
   }
 }
