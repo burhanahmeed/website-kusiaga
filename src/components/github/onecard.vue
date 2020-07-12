@@ -19,7 +19,7 @@
         line-height="tight"
         is-truncated
       >
-        <c-link as="router-link" :to="props.html_url" is-external>
+        <c-link as="router-link" :href="props.html_url" is-external>
           {{ props.name }}
         </c-link>
       </c-box>
