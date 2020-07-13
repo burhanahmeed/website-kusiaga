@@ -27,7 +27,7 @@
 
     <div style="margin: 20px 0">
       <c-text fontSize="xl" style="font-weight: 700">Howdy!</c-text>
-      <c-text fontSize="md">I am mainly work with JavaScript and all the thing related to web technology, but sometimes I also work with mobile development if needed.</c-text>
+      <c-text fontSize="md">I am mainly work with JavaScript frondend, backend and all the thing related to web technology. Sometimes I create a web stuff / a side project just for fun or to solve a problem around me.</c-text>
     </div>
 
     <div style="margin: 20px 0">
