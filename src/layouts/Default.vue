@@ -15,7 +15,6 @@
             <g-link class="nav__link" to="/">Home</g-link>
             <g-link class="nav__link" to="/talks">Talks</g-link>
             <g-link class="nav__link" to="/blog/">Blog</g-link>
-            <g-link class="nav__link" to="/about/">About</g-link>
           </nav>
         </div>
       </header>

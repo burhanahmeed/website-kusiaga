@@ -48,6 +48,9 @@ export default {
       ]
     }
   },
+  mounted () {
+    this.$router.push('/');
+  },
   data () {
     return {
       meta: {
