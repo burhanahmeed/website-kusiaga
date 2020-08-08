@@ -34,7 +34,7 @@
       </div>
     </section>
 
-    <section style="margin: 20px 0">
+    <section>
       <div style="margin: 10px 0">
         <c-text fontSize="xl" style="font-weight: 700">Howdy!</c-text>
         <c-text fontSize="xl">I'm a Software Engineer who work with Javascript, Vue, Nuxt, and Nodejs but I can adjust based on requirement. 👨‍💻 I like creating digital product and solve problems on society. 🧑‍🚒 Sometime I create OSS stuffs like a libary or just a web component. 🎓 I completed my bachelor degree in IS at ITS Surabaya, Indonesia.</c-text>
@@ -79,16 +79,22 @@
         <c-box fontSize="xl">It is long story. 👓 Kusiaga was my very first product when I learn web development. It is a link shortener, you can <c-link color="cyan.500" is-external href="https://kusia.ga">access here</c-link>. I was looking for a proper domain name with [dot] .ga domain but I could not. So I ended up with that name. 🤣</c-box>
       </c-box>
     </section>
-
-    <!-- <div style="margin: 20px 0">
-      <c-text fontSize="xl" style="font-weight: 700">My public works</c-text>
-      <github-wrapper :nightMode="isNightMode" />
-      <c-box align-items="center" width="100%" style="padding: 15px; text-align: center">
-        <c-link as="router-link" href="https://github.com/burhanahmeed" is-external>
-          <c-button variant-color="green">View on Github</c-button>
-        </c-link>
+    
+    <section>
+      <c-box>
+        <c-text fontSize="xl" style="font-weight: 700">Some of my work on Github</c-text>
+        <github-wrapper :nightMode="isNightMode" />
+        <c-box align-items="center" width="100%" style="padding: 15px; text-align: center">
+          <c-link as="router-link" href="https://github.com/burhanahmeed" is-external>
+            <c-button variant-color="green">View on Github</c-button>
+          </c-link>
+        </c-box>
       </c-box>
-    </div> -->
+    </section>
+
+    <section>
+
+    </section>
 
   </Layout>
 </template>
@@ -182,6 +188,9 @@ export default {
 </style>
 
 <style scoped>
+section {
+  margin: 20px 0;
+}
 h4 {
   margin-bottom: 5px;
 }

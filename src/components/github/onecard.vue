@@ -1,5 +1,5 @@
 <template>
-  <c-box maxW="sm" border-width="1px" rounded="lg" overflow="hidden">
+  <c-box maxW="21rem" border-width="1px" rounded="lg" overflow="hidden">
     <c-box p="6">
       <c-box d="flex" align-items="baseline">
         <c-box
