@@ -4,8 +4,17 @@
     <!-- Learn how to use images here: https://gridsome.org/docs/images -->
     <!-- <g-image v-if="!isNightMode" alt="Example image" src="~/assets/logo.png" width="135" />
     <g-image v-if="isNightMode" alt="Example image" src="~/assets/logo-w.png" width="135" /> -->
-    <div class="group-person">
+    <section class="group-person">
       <g-image 
+        @mouseover="toggleAvatar(false)"
+        style="border-radius: 100%" 
+        alt="Example image" 
+        src="~/assets/photo.jpg" width="100"
+        v-if="isAvaShowed"
+      />
+      <g-image 
+        v-else
+        @mouseout="toggleAvatar(true)"
         style="border-radius: 100%" 
         alt="Example image" 
         src="~/assets/avatar.png" width="100" 
@@ -23,14 +32,55 @@
           a software engineer, startup enthusiast, entrepreneur
         </c-text>
       </div>
-    </div>
+    </section>
 
-    <div style="margin: 20px 0">
-      <c-text fontSize="xl" style="font-weight: 700">Howdy!</c-text>
-      <c-text fontSize="md">I am mainly work with JavaScript frondend, backend and all the thing related to web technology. Sometimes I create a web stuff / a side project just for fun or to solve a problem around me.</c-text>
-    </div>
+    <section style="margin: 20px 0">
+      <div style="margin: 10px 0">
+        <c-text fontSize="xl" style="font-weight: 700">Howdy!</c-text>
+        <c-text fontSize="xl">I'm a Software Engineer who work with Javascript, Vue, Nuxt, and Nodejs but I can adjust based on requirement. 👨‍💻 I like creating digital product and solve problems on society. 🧑‍🚒 Sometime I create OSS stuffs like a libary or just a web component. 🎓 I completed my bachelor degree in IS at ITS Surabaya, Indonesia.</c-text>
+      </div>
+      <div style="margin: 10px 0">
+         <c-box d="flex" align-items="baseline">
+           <c-link is-external href="https://t.me/burhannahm" p="5">
+             <g-image 
+              style="border-radius: 100%" 
+              alt="Example image" 
+              src="~/assets/social/telegram.svg" width="30"
+            />
+           </c-link>
+           <c-link is-external href="https://twitter.com/burhannahm" p="5">
+             <g-image 
+              style="border-radius: 100%" 
+              alt="Example image" 
+              src="~/assets/social/twitter.svg" width="30"
+            />
+           </c-link>
+           <c-link is-external href="mailto:brhn@kusiaga.com" p="5">
+             <g-image 
+              style="border-radius: 100%" 
+              alt="Example image" 
+              src="~/assets/social/mail.svg" width="30"
+            />
+           </c-link>
+           <c-link is-external href="https://github.com/burhanahmeed" p="5">
+             <g-image 
+              style="border-radius: 100%" 
+              alt="Example image" 
+              src="~/assets/social/github.svg" width="30"
+            />
+           </c-link>
+        </c-box>
+      </div>
+    </section>
 
-    <div style="margin: 20px 0">
+    <section id="why-kusiaga">
+      <c-box bg="#171717" w="100%" p="4" color="white">
+        <c-box fontSize="xl" fontWeight="700">Why Kusiaga?</c-box>
+        <c-box fontSize="xl">It is long story. 👓 Kusiaga was my very first product when I learn web development. It is a link shortener, you can <c-link color="cyan.500" is-external href="https://kusia.ga">access here</c-link>. I was looking for a proper domain name with [dot] .ga domain but I could not. So I ended up with that name. 🤣</c-box>
+      </c-box>
+    </section>
+
+    <!-- <div style="margin: 20px 0">
       <c-text fontSize="xl" style="font-weight: 700">My public works</c-text>
       <github-wrapper :nightMode="isNightMode" />
       <c-box align-items="center" width="100%" style="padding: 15px; text-align: center">
@@ -38,24 +88,7 @@
           <c-button variant-color="green">View on Github</c-button>
         </c-link>
       </c-box>
-    </div>
-
-    <!-- <p class="editor">
-      <span style="color: rgb(190, 173, 236)">console.</span><span style="color: #0b6a35">log<span style="color: white">(</span></span><span style="color: rgb(179, 86, 18)">'Welcome to Kusiaga Digital Lab'</span><span style="color: white">)</span>
-      <span v-if="!isInit" style="display: flex; justify-content: space-between;">
-        <span style="color: rgb(179, 86, 18)">'Welcome to Kusiaga Digital Lab'</span>
-        <span style="color: rgb(190, 173, 236); font-size: 13px">../App.js</span>
-      </span>
-      <span v-if="isInit" style="display: flex; justify-content: space-between;">
-        <span>{{ welcomeTxt }}</span>
-        <span style="color: rgb(190, 173, 236); font-size: 13px">../App.js</span>
-      </span>
-    </p> -->
-
-    <!-- <p class="home-links">
-      <a href="https://gridsome.org/docs/" target="_blank" rel="noopener">Medium</a>
-      <a href="https://github.com/gridsome/gridsome" target="_blank" rel="noopener">GitHub</a>
-    </p> -->
+    </div> -->
 
   </Layout>
 </template>
@@ -66,7 +99,8 @@ import {
   CText, 
   CButton,
   CBox,
-  CLink
+  CLink,
+  CIcon
 } from '@chakra-ui/vue';
 export default {
   components: {
@@ -78,7 +112,7 @@ export default {
   },
   metaInfo (){
     return {
-      title: 'Kusiaga',
+      title: 'Burhanuddin Ahmad',
       meta: [
         { name: "description", content: this.meta.description },
             // twitter-card: https://cards-dev.twitter.com/validator
@@ -103,7 +137,8 @@ export default {
         description: 'Kusiaga is a personal website owned by Burhanuddin Ahmad. Kusiaga make a digital product and write a blog about tech and product related but not limited to.',
         image: 'https://kusiaga.com/metaimg.jpg',
         site: '@burhannahm'
-      }
+      },
+      isAvaShowed: true
     }
   },
   mounted () {
@@ -121,6 +156,9 @@ export default {
   methods: {
     nightMode (val) {
       this.isNightMode = val;
+    },
+    toggleAvatar (args) {
+      this.isAvaShowed = args
     }
   }
 }

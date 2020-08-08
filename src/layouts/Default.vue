@@ -6,8 +6,8 @@
           <strong>
             <g-link to="/">{{ $static.metadata.siteName }}</g-link>
           </strong>
-          <img @click="toggle" v-if="!isNightMode" class="iconsvg" src="../assets/half-moon.svg" alt="moon">
-          <img @click="toggle" v-if="isNightMode" class="iconsvg" src="../assets/sun.svg" alt="sun">
+          <!-- <img @click="toggle" v-if="!isNightMode" class="iconsvg" src="../assets/half-moon.svg" alt="moon">
+          <img @click="toggle" v-if="isNightMode" class="iconsvg" src="../assets/sun.svg" alt="sun"> -->
         </div>
         <div class="menu">
           <span class="hamburger" @click="toggleMenu">&#9776;</span>
@@ -22,7 +22,7 @@
       <slot/>
     </div>
     <footer class="footer">
-      <span>Copyright © 2020 Kusiaga. All rights reserved. | Crafted by <a target="_blank" href="https://github.com/burhanahmeed">Burhanuddin Ahmed</a> around Southeast Asia.</span>
+      <span>Copyright © 2020 Kusiaga. All rights reserved. | Crafted by <a target="_blank" href="https://github.com/burhanahmeed">Burhanuddin Ahmed</a> in Southeast Asia.</span>
     </footer>
   </div>
 </template>

@@ -8,6 +8,8 @@ import Chakra from '@chakra-ui/vue'
 // require("gridsome-plugin-remark-prismjs-all/themes/solarized.css");
 require("gridsome-plugin-remark-prismjs-all/themes/tomorrow.css");
 
+import '~/assets/style.css';
+
 export default function (Vue, { router, head, isClient }) {
   // Set default layout as a global component
   Vue.use(Chakra)

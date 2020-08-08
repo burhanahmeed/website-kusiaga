@@ -6,9 +6,9 @@
 
 module.exports = {
   siteUrl: 'https://kusiaga.com',
-  siteName: 'Kusiaga',
-  titleTemplate: '%s - Digital Experiement Lab',
-  icon: './src/assets/icon.jpg',
+  siteName: 'Berhan',
+  titleTemplate: '%s - Berhan\'s Experiment Lab',
+  icon: './src/assets/icon.png',
   transformers: {
     remark: {
       externalLinksTarget: '_blank',
