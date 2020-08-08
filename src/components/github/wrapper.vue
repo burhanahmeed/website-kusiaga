@@ -41,7 +41,7 @@ export default {
         }
     },
     mounted () {
-        // this.setup();
+        this.setup();
     }
 }
 </script>
