@@ -140,7 +140,7 @@ export default {
       isInit: true,
       welcomeTxt: 'Please wait ...',
       meta: {
-        description: 'Kusiaga is a personal website owned by Burhanuddin Ahmad. Kusiaga make a digital product and write a blog about tech and product related but not limited to.',
+        description: 'Berhan is a Software Engineer who code in Javascript, mostly he uses framework like Vue, Nuxt, NodeJS, Express, etc. He also write blog about tech, startup, and product related.',
         image: 'https://kusiaga.com/metaimg.jpg',
         site: '@burhannahm'
       },
