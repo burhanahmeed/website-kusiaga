@@ -7,7 +7,7 @@
 module.exports = {
   siteUrl: 'https://kusiaga.com',
   siteName: 'Berhan',
-  titleTemplate: '%s ——— Berhan\'s Experiment Lab',
+  titleTemplate: '%s — Berhan\'s Experiment Lab',
   icon: './src/assets/icon.png',
   transformers: {
     remark: {

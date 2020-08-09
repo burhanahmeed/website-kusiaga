@@ -23,7 +23,12 @@
                     </c-box>
                 </c-box>
             </template>
-        </c-box>        
+        </c-box>
+        <c-box align-items="center" width="100%" style="padding: 15px; text-align: center">
+          <g-link to="/projects">
+            <c-button variant-color="green">View Projects</c-button>
+          </g-link>
+        </c-box>
     </c-box>
 </template>
 
