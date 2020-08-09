@@ -93,7 +93,7 @@
     </section>
 
     <section>
-
+      <project-wrapper></project-wrapper>
     </section>
 
   </Layout>
@@ -101,6 +101,7 @@
 
 <script>
 import GithubWrapper from '../components/github/wrapper';
+import ProjectWrapper from '../components/home/project/wrapper'
 import { 
   CText, 
   CButton,
@@ -111,6 +112,7 @@ import {
 export default {
   components: {
     GithubWrapper,
+    ProjectWrapper,
     CText,
     CButton,
     CBox,
