@@ -1,22 +1,11 @@
 <template>
   <Layout>
-    <!-- <h4>My Talks</h4>
-    <ul>
-        <li>
-            <div class="card">
-                <h4>SurabayaJS Online Meetup</h4>
-                <p>
-                    Topic: <a href="https://speakerdeck.com/burhanahmeed/javascript-and-seo-so" target="_blank">Javascript and SEO</a>
-                </p>
-                <span>Date: 16 May 2020</span>
-            </div>
-        </li>
-    </ul> -->
     <c-box w="100%">
       <c-box py="4">
         <c-text fontSize="xl" fontWeight="700">Talks</c-text>
       </c-box>
       <c-box w="100%" bg="#a6a6a614" p="1">
+        <template></template>
         <c-box borderBottom="thin #00000017 solid" p="5">
           <c-link href="https://speakerdeck.com/burhanahmeed/javascript-and-seo-so" is-external>
             <c-text fontSize="xl" fontWeight="700"><c-icon name="arrow-forward"></c-icon> Javascript and SEO, So?</c-text> 
