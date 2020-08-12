@@ -24,7 +24,7 @@
                 </c-box>
             </template>
         </c-box>
-        <c-box align-items="center" width="100%" style="padding: 15px; text-align: center">
+        <c-box align-items="center" width="100%" style="padding: 15px; text-align: center" v-if="link">
           <g-link to="/projects">
             <c-button variant-color="green">View Projects</c-button>
           </g-link>
@@ -47,6 +47,10 @@ export default {
         limit: {
             type: Number,
             default: 3
+        },
+        link: {
+            type: Boolean,
+            default: true
         }
     },
     components: {

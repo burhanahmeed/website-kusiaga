@@ -13,8 +13,10 @@
           <span class="hamburger" @click="toggleMenu">&#9776;</span>
           <nav class="nav" :class="{ 'nav-on': isMenuShowed }">
             <g-link class="nav__link" to="/">Home</g-link>
+            <!-- <g-link class="nav__link" to="/stuffs/">Stuffs</g-link> -->
+            <g-link class="nav__link" to="/projects/">Projects</g-link>
             <g-link class="nav__link" to="/talks">Talks</g-link>
-            <g-link class="nav__link" to="/blog/">Blog</g-link>
+            <g-link class="nav__link" to="/blogs/">Blogs</g-link>
           </nav>
         </div>
       </header>
