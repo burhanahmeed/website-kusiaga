@@ -32,7 +32,7 @@ export default {
       image: ''
     }
   },
-  beforeMount () {
+  mounted () {
     if (this.$route.params.slug) {
       let slug = this.$route.params.slug;
       // slug = slug.split('/');

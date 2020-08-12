@@ -96,6 +96,11 @@
       <project-wrapper></project-wrapper>
     </section>
 
+    <section>
+      <c-text my="3" align="center" fontSize="2xl" fontWeight="bold">Sponsoring <c-icon name="star"></c-icon></c-text>
+      <iframe style="margin: 0px; border: 0px none; height: 400px; width: 100%; border-radius: 3px; box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px; background: rgb(255, 255, 255) url('https://marketplace.kony.com/static/dist/images/loader.svg') no-repeat scroll center center / 64px; transition: all 0.4s ease 0s;" src="https://www.buymeacoffee.com/widget/page/zOkT07A?description=Support%20me%20on%20Buy%20me%20a%20coffee!&amp;color=%23FF813F"></iframe>
+    </section>
+
   </Layout>
 </template>
 
@@ -116,6 +121,7 @@ export default {
     CText,
     CButton,
     CBox,
+    CIcon,
     CLink
   },
   metaInfo (){
