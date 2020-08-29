@@ -3,7 +3,7 @@ module.exports = [
         unique_name: 'covidmonitor'
     },
     {
-        unique_name: 'reactjs-whatsapp-redirector'
+        unique_name: 'vue-daily-schedule'
     },
     {
         unique_name: 'Denamo'
