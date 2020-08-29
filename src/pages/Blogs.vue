@@ -1,7 +1,7 @@
 <template>
     <Layout>
-        <h1>Blogs</h1>
-        Also check my Medium account -><g-link class="nav__link" to="https://medium.com/@burhanahmeed">here</g-link>
+        <c-text fontWeight="bold" fontSize="xl" >Blogs</c-text>
+        <c-text fontSize="xl">Sometimes I write a blog about tech, startup, product, or just random stuffs. Written in Bahasa Indonesia.</c-text>
         <div class="content-wrapper">
           <template v-for="(p, idx) in $page.Post.edges">
             <g-link :to="p.node.path" :key="idx">
@@ -34,7 +34,12 @@ query {
 
 <script>
 import moment from 'moment'
+import { CBox, CText } from '@chakra-ui/vue'
 export default {
+  components: {
+    CBox,
+    CText
+  },
   metaInfo (){
     return {
       title: 'Blog Posts',
