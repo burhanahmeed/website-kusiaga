@@ -1,5 +1,11 @@
 module.exports = [
     {
+        name: 'DakwahVids',
+        img: require('@/assets/project/dakwahvids.JPG'),
+        description: 'DakwahVids is a curated Islamic videos or lectural videos from mostly official Dakwah account.',
+        link: 'https://dakwahvids.hostman.site/'
+    },
+    {
         name: 'Covid Monitor',
         img: require('@/assets/project/covidmonitor.png'),
         description: 'A web app for monitoring Covid-19 situation, updated daily as long as the API is still available.',
