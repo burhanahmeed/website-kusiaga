@@ -3,7 +3,7 @@
     <c-box w="100%">
       <c-box py="4">
         <c-text fontSize="xl" fontWeight="700">Talks</c-text>
-        <c-text fontSize="xl">Sometimes I give a talk about Tech / Startup.</c-text>
+        <c-text fontSize="xl">👏🏼 Sometimes I give a talk about Tech / Startup.</c-text>
       </c-box>
       <c-box w="100%" bg="#a6a6a614" p="1">
         <template></template>
