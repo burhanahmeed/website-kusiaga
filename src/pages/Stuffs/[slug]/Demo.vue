@@ -34,10 +34,7 @@ export default {
   },
   mounted () {
     if (this.$route.params.slug) {
-      let slug = this.$route.params.slug;
-      // slug = slug.split('/');
-      // console.log(slug)
-      // slug = slug[1];
+      let slug = this.$route.params.slug;      
       let obj = this.stuffs.find(el => el.slug == slug);
       if (obj) {
         this.title = obj.title;
