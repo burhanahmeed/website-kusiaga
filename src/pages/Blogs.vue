@@ -1,18 +1,20 @@
 <template>
     <Layout>
+      <c-box mb="5">
         <c-text fontWeight="bold" fontSize="xl" >Blogs</c-text>
-        <c-text fontSize="xl">Sometimes I write a blog about tech, startup, product, or just random stuffs. Written in Bahasa Indonesia.</c-text>
-        <div class="content-wrapper">
+        <c-text fontSize="xl">👨🏻‍💻 Sometimes I write a blog about tech, startup, product, or just random stuffs. Written in Bahasa Indonesia.</c-text>
+        <c-box mt="5">
           <template v-for="(p, idx) in $page.Post.edges">
             <g-link :to="p.node.path" :key="idx">
                 <div class="item">
-                  <h4>{{ p.node.title }}</h4>
+                  <c-text fontWeight="bold">{{ p.node.title }}</c-text>
                   <span><small>Posted from {{ p.node.date | date_format }}</small></span>
                   <p>{{ p.node.excerpt }}</p>
                 </div>
             </g-link>
           </template>
-        </div>
+        </c-box>
+      </c-box>
     </Layout>
 </template>
 
@@ -90,7 +92,7 @@ a {
   text-decoration: none;
 }
 p {
-  font-size: 13px;
+  /* font-size: 13px; */
 }
 .item {
   cursor: pointer;
