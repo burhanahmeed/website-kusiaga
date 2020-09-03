@@ -2,7 +2,7 @@ module.exports = [
     {
         name: 'DakwahVids',
         img: require('@/assets/project/dakwahvids.jpg'),
-        description: 'DakwahVids is a curated Islamic videos or lectural videos from mostly official Dakwah account.',
+        description: 'DakwahVids is a curated list of islamic videos from official dakwah account on YouTube.',
         link: 'https://dakwahvids.hostman.site'
     },
     {
