@@ -1,7 +1,7 @@
 <template>
     <c-box w="100%" p="4" color="black">
         <c-text fontSize="xl" style="font-weight: 700">Projects</c-text>
-        <c-text fontSize="xl">🕹 Sometime I create product to solve some problems, just for fun, or just to solve my own problems.</c-text>
+        <c-text fontSize="xl">🕹 Sometimes I create product to solve some problems, just for fun, or just to solve my own problems.</c-text>
         <c-box py="5">
             <template v-for="(i, idx) in projects">
                 <c-box :d="display" mt="3" bg="#a6a6a614" boxShadow="md" :key="idx" v-if="idx < limit">
