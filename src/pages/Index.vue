@@ -37,7 +37,7 @@
     <section>
       <div style="margin: 10px 0">
         <c-text fontSize="xl" style="font-weight: 700">Howdy!</c-text>
-        <c-text fontSize="xl">I'm a Software Engineer who work with Javascript, Vue, Nuxt, and Nodejs but I can adjust based on requirement. 👨‍💻 I like creating digital product and solve problems on society. 🧑‍🚒 Sometime I create OSS stuffs like a libary or just a web component. 🎓 I completed my bachelor degree in IS at ITS Surabaya, Indonesia.</c-text>
+        <c-text fontSize="xl">I'm a Software Engineer who work with Javascript, Vue, Nuxt, and Nodejs but I can adjust based on requirement. 👨‍💻 I like creating digital product and solve problems on society. 🧑‍🚒 Sometimes I create OSS stuffs like a libary or just a web component. 🎓 I completed my bachelor degree in IS at ITS Surabaya, Indonesia.</c-text>
       </div>
       <div style="margin: 10px 0">
          <c-box d="flex" align-items="baseline">
@@ -82,7 +82,7 @@
     
     <section>
       <c-box>
-        <c-text fontSize="xl" style="font-weight: 700">Some of my work on Github</c-text>
+        <c-text fontSize="xl" style="font-weight: 700">Some of my works on Github</c-text>
         <github-wrapper :nightMode="isNightMode" />
         <c-box align-items="center" width="100%" style="padding: 15px; text-align: center">
           <c-link as="router-link" href="https://github.com/burhanahmeed" is-external>
