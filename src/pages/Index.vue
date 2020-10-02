@@ -82,7 +82,7 @@
     
     <section>
       <c-box>
-        <c-text fontSize="xl" style="font-weight: 700">Some of my work on Github</c-text>
+        <c-text fontSize="xl" style="font-weight: 700">Some of my works on Github</c-text>
         <github-wrapper :nightMode="isNightMode" />
         <c-box align-items="center" width="100%" style="padding: 15px; text-align: center">
           <c-link as="router-link" href="https://github.com/burhanahmeed" is-external>
